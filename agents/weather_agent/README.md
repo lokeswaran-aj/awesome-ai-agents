@@ -2,6 +2,9 @@
 
 An intelligent weather analysis agent built with LangGraph v1 that provides detailed weather forecasts for any city worldwide. The agent uses a ReAct (Reasoning + Acting) pattern to understand user queries and fetch real-time weather data from the Open-Meteo API.
 
+![weather-agent-demo](https://github.com/user-attachments/assets/f6ba0a19-0ed1-477c-b85b-0c67dbbdf80c)
+
+
 ## ✨ Features
 
 - **Natural Language Queries**: Ask about weather in conversational language
