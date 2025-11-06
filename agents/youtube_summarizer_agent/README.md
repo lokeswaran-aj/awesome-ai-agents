@@ -2,6 +2,8 @@
 
 An intelligent YouTube video summarization agent built with LangGraph v1 that converts lengthy videos into concise, easy-to-digest summaries. The agent uses a **ReAct** (Reasoning + Acting) pattern by using the `get_youtube_video_transcript` tool to fetch video transcripts and use the LLM to summarize them while filtering out promotional content and filler.
 
+![youtube_summarizer_agent](https://github.com/user-attachments/assets/abb6d5e9-decb-4465-a4ee-12032da63752)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
