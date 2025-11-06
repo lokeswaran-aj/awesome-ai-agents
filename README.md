@@ -4,9 +4,10 @@ A curated collection of open-source AI agents built with LangGraph v1 for learni
 
 ## 📚 Agent Collection
 
-| Agent                                              | Description                                                                        | Pattern | Status      |
-| -------------------------------------------------- | ---------------------------------------------------------------------------------- | ------- | ----------- |
-| [Weather Analyst](./agents/weather_agent/graph.py) | Intelligent weather analyst agent that provides detailed weather data for any city | ReAct   | ✅ Complete |
+| Agent                                                             | Description                                                                         | Pattern | Status      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------- | ----------- |
+| [Weather Analyst](./agents/weather_agent/README.md)               | Intelligent weather analyst agent that provides detailed weather data for any city  | ReAct   | ✅ Complete |
+| [YouTube Summarizer](./agents/youtube_summarizer_agent/README.md) | Smart video summarization agent that converts YouTube videos into concise summaries | ReAct   | ✅ Complete |
 
 ---
 
@@ -51,11 +52,15 @@ The server will start on `http://127.0.0.1:2024`
 
 ## 💬 Usage
 
-### Accessing the Agent
+### Accessing the Agents
 
-You can interact with the agent through:
+You can interact with the agents through:
 
-1. **Langchain's Agent Chat UI**: [https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=weather_agent](https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=weather_agent)
+1. **Langchain's Agent Chat UI**:
+
+   - Weather Agent: [https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=weather_agent](https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=weather_agent)
+   - YouTube Summarizer: [https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=youtube_summarizer_agent](https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=youtube_summarizer_agent)
+
 2. **LangGraph's Studio UI**: [https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024](https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024)
 
 ---
@@ -64,18 +69,25 @@ You can interact with the agent through:
 
 ```
 awesome-ai-agents/
-├── agents/                  # Agent implementations
-│   └── weather_agent/      # Weather analyst agent
-│       ├── graph.py        # LangGraph workflow
-│       ├── nodes.py        # Node implementations
-│       ├── tools.py        # Tool definitions
-│       ├── model.py        # LLM configuration
-│       ├── prompt.py       # System prompts
-│       └── README.md       # Agent documentation
-├── langgraph.json          # Centralized LangGraph configuration
-├── .env.example            # Example environment variables
-├── pyproject.toml          # Project dependencies
-└── README.md               # This file
+├── agents/                      # Agent implementations
+│   ├── weather_agent/           # Weather analyst agent
+│   │   ├── graph.py             # LangGraph workflow
+│   │   ├── nodes.py             # Node implementations
+│   │   ├── tools.py             # Tool definitions
+│   │   ├── model.py             # LLM configuration
+│   │   ├── prompt.py            # System prompts
+│   │   └── README.md            # Agent documentation
+│   └── youtube_summarizer_agent/ # YouTube summarizer agent
+│       ├── graph.py             # LangGraph workflow
+│       ├── nodes.py             # Node implementations
+│       ├── tools.py             # Tool definitions
+│       ├── model.py             # LLM configuration
+│       ├── prompt.py            # System prompts
+│       └── README.md            # Agent documentation
+├── langgraph.json               # Centralized LangGraph configuration
+├── .env.example                 # Example environment variables
+├── pyproject.toml               # Project dependencies
+└── README.md                    # This file
 ```
 
 ## 💡 Agent Usage

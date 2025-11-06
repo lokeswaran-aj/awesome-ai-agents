@@ -4,45 +4,6 @@ An intelligent weather analysis agent built with LangGraph v1 that provides deta
 
 ![weather-agent-demo](https://github.com/user-attachments/assets/f6ba0a19-0ed1-477c-b85b-0c67dbbdf80c)
 
-
-## ✨ Features
-
-- **Natural Language Queries**: Ask about weather in conversational language
-- **Flexible Date Ranges**: Get weather forecasts for specific date ranges
-- **Detailed Metrics**: Temperature, rainfall, and snowfall data
-- **Geocoding Support**: Automatically converts city names to coordinates
-- **Hourly Forecasts**: Detailed hour-by-hour weather breakdown
-- **ReAct Pattern**: Combines reasoning and action for intelligent responses
-
-## 🏗️ Architecture
-
-This agent implements the **ReAct (Reasoning + Acting)** pattern:
-
-1. **Reasoning**: The LLM analyzes the user's query and decides what information is needed
-2. **Acting**: Calls the weather tool with appropriate parameters (city, date range)
-3. **Responding**: Synthesizes the weather data into a natural language response
-
-### What is ReAct?
-
-ReAct agents combine reasoning and action in an interleaved manner. The agent:
-
-- **Thinks** about what to do next
-- **Acts** by calling tools/functions
-- **Observes** the results
-- **Repeats** until the task is complete
-
-## 📁 Project Structure
-
-```
-agents/weather_agent/
-├── graph.py          # LangGraph workflow definition
-├── nodes.py          # Node implementations (LLM calls)
-├── model.py          # LLM model configuration
-├── tools.py          # Weather tool and API integration
-├── prompt.py         # System prompts and tool descriptions
-└── README.md         # This file
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -108,6 +69,48 @@ Try asking the agent questions like:
 - "Will it rain in London next week?"
 - "Give me the temperature forecast for Tokyo from 2025-11-15 to 2025-11-20"
 - "What's the weather looking like in San Francisco for the next 5 days?"
+
+## 📁 Project Structure
+
+```
+agents/weather_agent/
+├── graph.py          # LangGraph workflow definition
+├── nodes.py          # Node implementations (LLM calls)
+├── model.py          # LLM model configuration
+├── tools.py          # Weather tool and API integration
+├── prompt.py         # System prompts and tool descriptions
+└── README.md         # This file
+```
+
+---
+
+## ✨ Features
+
+- **Natural Language Queries**: Ask about weather in conversational language
+- **Flexible Date Ranges**: Get weather forecasts for specific date ranges
+- **Detailed Metrics**: Temperature, rainfall, and snowfall data
+- **Geocoding Support**: Automatically converts city names to coordinates
+- **Hourly Forecasts**: Detailed hour-by-hour weather breakdown
+- **ReAct Pattern**: Combines reasoning and action for intelligent responses
+
+## 🏗️ Architecture
+
+This agent implements the **ReAct (Reasoning + Acting)** pattern:
+
+1. **Reasoning**: The LLM analyzes the user's query and decides what information is needed
+2. **Acting**: Calls the weather tool with appropriate parameters (city, date range)
+3. **Responding**: Synthesizes the weather data into a natural language response
+
+### What is ReAct?
+
+ReAct agents combine reasoning and action in an interleaved manner. The agent:
+
+- **Thinks** about what to do next
+- **Acts** by calling tools/functions
+- **Observes** the results
+- **Repeats** until the task is complete
+
+---
 
 ## 🔧 How It Works
 
