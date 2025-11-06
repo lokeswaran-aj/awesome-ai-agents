@@ -1,0 +1,6 @@
+{
+  "dependencies": ".",
+  "graphs": {
+    "weather_agent": "agents/weather_agent/graph.py:graph"
+  }
+}
