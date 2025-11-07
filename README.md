@@ -4,10 +4,11 @@ A curated collection of open-source AI agents built with LangGraph v1 for learni
 
 ## 📚 Agent Collection
 
-| Agent                                                             | Description                                                                         | Pattern | Status      |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------- | ----------- |
-| [Weather Analyst](./agents/weather_agent/README.md)               | Intelligent weather analyst agent that provides detailed weather data for any city  | ReAct   | ✅ Complete |
-| [YouTube Summarizer](./agents/youtube_summarizer_agent/README.md) | Smart video summarization agent that converts YouTube videos into concise summaries | ReAct   | ✅ Complete |
+| Agent                                                             | Description                                                                          | Pattern | Status      |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------- | ----------- |
+| [Weather Analyst](./agents/weather_agent/README.md)               | Intelligent weather analyst agent that provides detailed weather data for any city   | ReAct   | ✅ Complete |
+| [YouTube Summarizer](./agents/youtube_summarizer_agent/README.md) | Smart video summarization agent that converts YouTube videos into concise summaries  | ReAct   | ✅ Complete |
+| [Search Agent](./agents/search_agent/README.md)                   | AI-powered web search agent that finds accurate, up-to-date information from the web | ReAct   | ✅ Complete |
 
 ---
 
@@ -17,6 +18,9 @@ A curated collection of open-source AI agents built with LangGraph v1 for learni
 
 - Python 3.13+
 - API key from your chosen LLM provider (Anthropic, OpenAI, Google, etc.)
+- Additional API keys depending on which agents you want to use:
+  - **Search Agent**: [Tavily API key](https://tavily.com)
+  - **Weather Agent**: [OpenWeather API key](https://openweathermap.org/api)
 
 ### Setup
 
@@ -32,7 +36,12 @@ cd awesome-ai-agents
 ```env
 MODEL_NAME=claude-haiku-4-5
 API_KEY=your-anthropic-api-key-here
+
+# Required for Search Agent
+TAVILY_API_KEY=your-tavily-api-key-here
 ```
+
+> **Note**: Different agents require different API keys. Check each agent's README for specific requirements.
 
 3. **Install dependencies**:
 
@@ -60,6 +69,7 @@ You can interact with the agents through:
 
    - Weather Agent: [https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=weather_agent](https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=weather_agent)
    - YouTube Summarizer: [https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=youtube_summarizer_agent](https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=youtube_summarizer_agent)
+   - Search Agent: [https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=search_agent](https://agentchat.vercel.app/?apiUrl=http://localhost:2024&assistantId=search_agent)
 
 2. **LangGraph's Studio UI**: [https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024](https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024)
 
@@ -69,25 +79,32 @@ You can interact with the agents through:
 
 ```
 awesome-ai-agents/
-├── agents/                      # Agent implementations
-│   ├── weather_agent/           # Weather analyst agent
-│   │   ├── graph.py             # LangGraph workflow
-│   │   ├── nodes.py             # Node implementations
-│   │   ├── tools.py             # Tool definitions
-│   │   ├── model.py             # LLM configuration
-│   │   ├── prompt.py            # System prompts
-│   │   └── README.md            # Agent documentation
-│   └── youtube_summarizer_agent/ # YouTube summarizer agent
-│       ├── graph.py             # LangGraph workflow
-│       ├── nodes.py             # Node implementations
-│       ├── tools.py             # Tool definitions
-│       ├── model.py             # LLM configuration
-│       ├── prompt.py            # System prompts
-│       └── README.md            # Agent documentation
-├── langgraph.json               # Centralized LangGraph configuration
-├── .env.example                 # Example environment variables
-├── pyproject.toml               # Project dependencies
-└── README.md                    # This file
+├── agents/                       # Agent implementations
+│   ├── weather_agent/            # Weather analyst agent
+│   │   ├── graph.py              # LangGraph workflow
+│   │   ├── nodes.py              # Node implementations
+│   │   ├── tools.py              # Tool definitions
+│   │   ├── model.py              # LLM configuration
+│   │   ├── prompt.py             # System prompts
+│   │   └── README.md             # Agent documentation
+│   ├── youtube_summarizer_agent/ # YouTube summarizer agent
+│   │   ├── graph.py              # LangGraph workflow
+│   │   ├── nodes.py              # Node implementations
+│   │   ├── tools.py              # Tool definitions
+│   │   ├── model.py              # LLM configuration
+│   │   ├── prompt.py             # System prompts
+│   │   └── README.md             # Agent documentation
+│   └── search_agent/             # Search agent
+│       ├── graph.py              # LangGraph workflow
+│       ├── nodes.py              # Node implementations
+│       ├── tools.py              # Tool definitions (DuckDuckGo & Tavily)
+│       ├── model.py              # LLM configuration
+│       ├── prompt.py             # System prompts
+│       └── README.md             # Agent documentation
+├── langgraph.json                # Centralized LangGraph configuration
+├── .env.example                  # Example environment variables
+├── pyproject.toml                # Project dependencies
+└── README.md                     # This file
 ```
 
 ## 💡 Agent Usage

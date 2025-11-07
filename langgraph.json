@@ -2,6 +2,7 @@
   "dependencies": ".",
   "graphs": {
     "weather_agent": "agents/weather_agent/graph.py:graph",
-    "youtube_summarizer_agent": "agents/youtube_summarizer_agent/graph.py:graph"
+    "youtube_summarizer_agent": "agents/youtube_summarizer_agent/graph.py:graph",
+    "search_agent": "agents/search_agent/graph.py:graph"
   }
 }
