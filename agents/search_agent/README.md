@@ -2,6 +2,8 @@
 
 An intelligent web search agent built with LangGraph v1 that helps you find accurate, relevant, and up-to-date information from the web. The agent uses a **ReAct** (Reasoning + Acting) pattern with powerful search tools (DuckDuckGo and Tavily) to retrieve real-time information and provide comprehensive, well-sourced answers.
 
+![search-agent](https://github.com/user-attachments/assets/731f70c1-2710-442a-97aa-45dee315eafe)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
