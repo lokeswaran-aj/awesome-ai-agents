@@ -3,6 +3,7 @@
   "graphs": {
     "weather_agent": "agents/weather_agent/graph.py:graph",
     "youtube_summarizer_agent": "agents/youtube_summarizer_agent/graph.py:graph",
-    "search_agent": "agents/search_agent/graph.py:graph"
+    "search_agent": "agents/search_agent/graph.py:graph",
+    "browser_agent": "agents/browser_agent/graph.py:make_graph"
   }
 }
